@@ -22,7 +22,11 @@
 <link rel="stylesheet" href="<?php bloginfo('template_directory')?>/bootstrap/bootstrap.min.css?ver=3.8.1">
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>?ver=3.8.1" />
 
-<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
+<!-- FontAwesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 <!--Otros -->
 <?php wp_head()?>
@@ -30,6 +34,23 @@
 <!-- scripts -->
 <?php call_scripts()?>
 <script type="text/javascript" src="<?php bloginfo('template_directory')?>/bootstrap/bootstrap.min.js?ver=3.8.1"></script>
+
+<?php if(is_home()){?>
+<script type="text/javascript" src="<?php bloginfo('template_directory')?>/js/bxslider.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	jQuery('.bxslider').bxSlider({
+	  minSlides: 1,
+	  maxSlides: 3,
+	  slideWidth: 313,
+	  slideMargin: 30,
+	  controls:true,
+	  pager:false,
+	  moveSlides:1
+	});
+});
+</script>
+<?php }?>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -45,25 +66,50 @@
 
 <body <?php body_class();?>>
 
+<div id="topbar">
+	<div class="container">
+		<div class="row">
+			<?php wp_nav_menu( array( 'container' => 'none', 'menu_class' => 'topmenu' , 'theme_location' => 'secondary' ) );?>
+		</div>
+	</div>
+</div>
+
 <div id="header">
 	<div class="container">
 		<div class="row">
 		
-			<a href="<?php bloginfo('url')?>" class="izq"><img src="<?php bloginfo('template_directory')?>/images/logo.png" alt="" /></a>
-			
-			<div class="search der">
-				<form method="get" id="searchform" action="<?php bloginfo('url')?>">
-					<label class="hidden" for="s"></label>
-					<span class="glyphicon glyphicon-search"></span>
-					<input type="text" placeholder="Buscar..." value="" name="s" id="s">
-					<!--<input type="submit" id="searchsubmit" value=""> -->
-				</form>
+			<div class="col-md-3">
+				<div class="row"><a href="<?php bloginfo('url')?>" class="izq"><img src="<?php bloginfo('template_directory')?>/images/logo.png" alt="" id="logo" /></a></div>
 			</div>
+			<div class="col-md-9">
+				<div class="row"><?php wp_nav_menu( array( 'container' => 'none', 'menu_class' => 'clearfix nav' , 'theme_location' => 'primary' ) );?></div>
+			</div>
+			
 			<div class="clear"></div>
-			
-			<div class="nav">				
-				<?php wp_nav_menu( array( 'container' => 'none', 'menu_class' => 'clearfix nav' , 'theme_location' => 'primary' ) );?>
-			</div>
 		</div>	
+	</div>
+</div>
+
+<div class="searchandsocial">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 col-md-offset-7">
+				<div class="socialbadges">
+					<div class="fb"><a href="<?php echo get_field('fb' , 'options') ?>"><span class="fa fa-facebook fa-fw"></span></a></div>
+					<div class="yt"><a href="<?php echo get_field('yt' , 'options') ?>"><span class="fa fa-youtube fa-fw"></span></a></div>
+					<div class="tw"><a href="<?php echo get_field('tw' , 'options') ?>"><span class="fa fa-twitter fa-fw"></span></a></div>
+				</div>
+				<div class="search der">
+					<form method="get" id="searchform" action="<?php bloginfo('url')?>">
+						<label class="hidden" for="s"></label>
+						<input type="text" placeholder="Qué buscas?..." value="" name="s" id="s">
+						<a onclick="document.getElementById('searchform').submit();"><span class="fa fa-search"></span></a>
+						<!--<input type="submit" id="searchsubmit" value="" class="fa fa-search"> -->
+					</form>
+				</div>
+			</div>
+			
+			</div>
+		</div>
 	</div>
 </div>

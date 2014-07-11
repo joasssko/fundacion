@@ -9,6 +9,31 @@ Author URL: http://upmedia.cl
 */
 
 
+@font-face {
+    font-family: 'glober';
+    src: url('fonts/glober_thin_free-webfont.eot');
+    src: url('fonts/glober_thin_free-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/glober_thin_free-webfont.woff') format('woff'),
+         url('fonts/glober_thin_free-webfont.ttf') format('truetype'),
+         url('fonts/glober_thin_free-webfont.svg#globerthin_free') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'glober';
+    src: url('fonts/glober_bold_free-webfont.eot');
+    src: url('fonts/glober_bold_free-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/glober_bold_free-webfont.woff') format('woff'),
+         url('fonts/glober_bold_free-webfont.ttf') format('truetype'),
+         url('fonts/glober_bold_free-webfont.svg#globerbold_free') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+
 *{
 	padding: 0px;
 	margin: 0px;
@@ -41,7 +66,7 @@ html[xmlns] .clearfix {
 .clear{ clear:both}
 
 
-h1, h2, h3, h4, h5 , h6{ font-family: 'Roboto Slab', georgia , serif; letter-spacing:-1px;}
+h1, h2, h3, h4, h5 , h6{ font-family: 'glober', helvetica, arial , sans-serif; letter-spacing:-1px;}
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{ color: #333; text-decoration:none; }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{ color: #A9272D; text-decoration:none; }
 
@@ -85,13 +110,127 @@ p {  }
 .divider{ border-top:1px solid #A9272D}
 .border { border-bottom: 1px solid #ccc; padding: 5px 0 0 0; margin-bottom: 5px;}
 
+/*clr's (por que los colores son lo importante y lo bonito del diseño)*/
+.clr-pack-de-la-vida{ background-color:rgba(11, 151, 224 , .7) !important;}
+.clr-mujer-descubre-tus-piernas{ background-color:rgba(227, 111, 111, .7) !important;}
+.clr-alimentacion-saludable{ background-color:rgba(18, 204, 123, .7) !important;}
+.clr-fundacion-banmedica{ background-color:rgba(0, 40, 93, .7) !important;}
+.clr-salud-infantil{ background-color:rgba(165, 212, 20, .7)!important;}
 
 /*******************************************************************************************/
 /*************************************HEADER************************************************/
 /*******************************************************************************************/
 
+#topbar{ font-size:13px; padding:5px 0; background-color:#00285d}
+#menu-secundario{ margin:0px; float:right; font-family:glober, helvetica, arial, sans-serif; }
+#menu-secundario li{ float:left; list-style:none}
+#menu-secundario li a{ color:#fff; line-height:100%; font-family:glober, helvetica, arial, sans-serif; font-weight:700 }
+
+#header{ background-color:#fff; border-bottom: 1px solid #f2f2f2; box-shadow:0 2px 5px rgba(0,0,0,.5); position:relative; z-index:2;}
+
+#logo{ padding:15px 0;}
+
+#menu-navegacion{ float:right}
+#menu-navegacion li{ float:left;; margin-top :40px;}
+#menu-navegacion li a{ color:#85c74f; font-size:14px; padding:10px; font-family:glober, helvetica, arial , sans-serif; font-weight:700}
+#menu-navegacion li a:hover , #menu-navegacion .current-menu-item a{ color:#00285d}
+#menu-navegacion li:last-child a{ padding-right: 0px;}
+
+.searchandsocial{ z-index:1; position:relative}
+.search{ background-color:#fff; display:block; border-bottom-left-radius:6px; border-bottom-right-radius:6px; padding:10px 20px;}
+.search a{ color:#85c74f}
+.search form input{ border: none; color:#85c74f; border-bottom: 1px solid #85c74f; font-family:glober, helvetica, arial, sans-serif; font-weight:300; font-size:16px; width:215px;}
+.search ::-webkit-input-placeholder {color:#85c74f; font-family:glober, helvetica, arial, sans-serif; font-weight:300; font-size:14px;}
+.search :-moz-placeholder {color:#85c74f; font-family:glober, helvetica, arial, sans-serif; font-weight:300; font-size:14px; }
+.search ::-moz-placeholder {color:#85c74f;font-family:glober, helvetica, arial, sans-serif; font-weight:300; font-size:14px;}
+.search :-ms-input-placeholder {color:#85c74f;font-family:glober, helvetica, arial, sans-serif; font-weight:300; font-size:14px;}
 
 
+.socialbadges div{ float:left; margin:0 2px; background-color:#00285d; padding:7px; display:block ; border-bottom-left-radius:3px; border-bottom-right-radius: 3px;}
+.socialbadges div:hover{ background-color:#85c74f; padding-top:10px}
+.socialbadges div span{ color:#fff; display:block; }
+.socialbadges div a:hover{ text-decoration:none}
+
+
+
+/*******************************************************************************************/
+/*************************************HOME**************************************************/
+/*******************************************************************************************/
+
+#bigcarousel{ position:relative; top:-42px; z-index:0; margin-bottom:-140px }
+#bigcarousel .carousel-caption{top:200px;}
+
+.carousel-control .fa-chevron-left,.carousel-control .fa-chevron-right{position:absolute;top:50%;z-index:5;display:inline-block}
+.carousel-control .fa-chevron-left{left:50%}
+.carousel-control .fa-chevron-right{right:50%}
+
+.box{background-color: #f9f9f9; padding: 0 0 10px 0; text-align:center; box-shadow:4px 3px 10px rgba(0,0,0,.2); border-radius:5px;}
+.box h2{ background-color:#46658e; color:#fff; font-weight:400; font-size:19px; text-align:center; padding:15px 0; border-top-left-radius:5px; border-top-right-radius:5px; }
+.box p{ font-size:16px; color:#8e8e8e; font-family:source sans pro, helvetica, arial , sans-serif; font-weight:300; padding:10px 30px}
+
+.destacado{ padding:30px 0; color:#8e8e8e; font-family: source sans pro, helvetica, arial, sans-serif}
+.destacado p{ font-size:14px; font-weight:300; line-height:150%; padding-bottom:15px;}
+.destacado a{ padding:10px 10px 10px 14px; font-size:14px; font-family:source sans pro, helvetica, arial, sans-serif; background-color:#46658e; color:#fff; border-radius:5px; }
+.destacado img{ margin-bottom:40px}
+
+.selector-categorias ul li{ float:left; width:20%; text-align:center; list-style:none; background-color:#c2c2c2; margin-bottom:5px;}
+
+.selector-categorias ul li a{ padding:15px 5px; display:block; color:#fff; font-size:16px; font-family:source sans pro, helvetica, arial, sans-serif; font-weight:700}
+
+.noticias .noticia{ float:left; margin-bottom:5px;}
+.noticia.big-noticia{ margin-right:5px;  width:665px; height:415px;}
+.noticia.mini-noticia{ width:330px; height:205px;}
+.noticia.n05 , .noticia.n06{ margin-left:5px;}
+
+.noticia .base{ position:relative; z-index:1;}
+.noticia .linker{ position:relative; z-index:2;}
+.noticia .sharer{ position:relative; z-index:3}
+
+.noticia.big-noticia .base{ height:415px;}
+.noticia.mini-noticia .base{ height:205px;}
+.noticia .base img{ z-index:0; position:relative; }
+
+.noticia.big-noticia .gruper{ height:415px; position: relative; bottom:415px; z-index:1; background-image:url(images/transp.png); background-position:bottom center; background-repeat:repeat-x}
+.noticia.mini-noticia .gruper{ height:205px; position: relative; bottom:205px; z-index:1; background-image:url(images/transpb.png); background-position:bottom center; background-repeat:repeat-x}
+
+.noticia.mini-noticia .base h3, .noticia.mini-noticia .base p{  padding: 0 20px; color:#fff !important; margin: 0 !important ; position:relative; top:80px;} 
+.noticia .base h2, .noticia .base p{  padding: 0 20px; color:#fff !important; margin: 0 !important ; position:relative; top:290px;} 
+
+.noticia .base p{ font-size:13px; font-family: source sans pro, helvetica, arial, sans-serif; font-weight:300}
+
+.noticia.big-noticia .linker a{ width:665px; height:415px; position:absolute; top:-415px}
+.noticia.mini-noticia .linker a{ width:330px; height:205px; position:absolute; top:-205px;}
+
+.noticia .layerup{display:none; background-image:url(images/morenews.png); background-position:center 50%; background-repeat:no-repeat; background-color:#f2f2f2;}
+
+.noticia.big-noticia .sharer{ bottom:415px; color:#fff; }
+.noticia.mini-noticia .sharer{ bottom:205px; color:#fff; }
+.noticia .sharer .cat-top{ float:right; padding:5px 10px; clear:both; margin-bottom:5px; font-family: source sans pro, helvetica, arial, sans-serif; font-weight:400}
+.noticia .sharer .nt{ float:right; padding:10px 8px; clear:both; margin-bottom:5px; }
+
+
+#somos{ background-image:url(images/somos.jpg); background-attachment:fixed; background-position:center; background-size:cover;}
+#somos .cols{ background-color:#f0f0f0; font-family:source sans pro, helvetica, arial, sans-serif; padding-top:20px; padding-bottom:20px;}
+#somos h1{ font-family: source sans pro, helvetica, arial, sans-serif; color:#0a3f6e; font-size:36px; font-weight:300 }
+#somos p{ line-height:150%; color:#818181; font-weight:300 }
+
+
+/*******************************************************************************************/
+/*************************************PAGE**************************************************/
+/*******************************************************************************************/
+
+.page #bigcarousel{ height:580px; background-position:center top; background-repeat:no-repeat; background-size:cover; background-attachment:fixed;}
+
+
+.page #bigcarousel .cols{ height: 580px;color:#fff}
+.page #bigcarousel .cols h1 , .page #bigcarousel .cols .btn{ margin-top:400px; }
+.page #bigcarousel .cols p{ line-height:150%; font-family: source sans pro, helvetica, arial , sans-serif; font-weight:300}
+
+.page #bigcarousel .cols a{ padding:15px 10px; color:#ed8484; background-color:#fff; box-shadow:0 6px 0 #d7d7d7; font-size:16px; font-family: glober, helvetica, arial, sans-serif; font-weight:700; min-width:272px; float:right; text-align:center }
+
+/*******************************************************************************************/
+/*************************************PAGINATION********************************************/
+/*******************************************************************************************/
 .navigation{ text-align:center}
 .wp-paginate {padding:0; margin:0;}
 .wp-paginate li {display:inline; list-style:none; font-size:14px;}
@@ -117,6 +256,7 @@ p {  }
 #mobile .wp-paginate .title, #mobile .wp-paginate .gap {display: none;}
 
 
+
 /*******************************************************************************************/
 /*************************************SINGLE************************************************/
 /*******************************************************************************************/
@@ -132,22 +272,43 @@ p {  }
 
 /******************************************FOOTER*******************************/
 
+#footer{ border-top: 5px solid #6ca33f; padding-top:50px; background-color:#fff;}
+#footer h1{ color:#6ca33f ; font-size:32px; font-weight:700} 	
+.info{ font-size:12px; color:#6ca33f ;  font-family:source sans pro , helvetica, arial, sans-serif; line-height:150%; padding-top:10px;}
+
+#footermenu ul li{ list-style:none}
+#footermenu ul li a{ color:#6ca33f; font-family: source sans pro, helvetica, arial, sans-serif; font-size:14px; font-weight:300; }
+
+#footer .wpcf7 input.wpcf7-text{ background-color:#f0f0f0; color:#6ca33f; padding:15px 20px; font-size:16px; border:none; border-radius:5px; margin-bottom:10px; width:100% ; font-family:source sans pro , helvetica, arial, sans-serif;}
+#footer .wpcf7 ::-webkit-input-placeholder {color:#6ca33f; font-family:glober, helvetica, arial, sans-serif; font-weight:300; font-size:14px;}
+#footer .wpcf7 :-moz-placeholder {color:#6ca33f; font-family:glober, helvetica, arial, sans-serif; font-weight:300; font-size:16px; }
+#footer .wpcf7 ::-moz-placeholder {color:#6ca33f;font-family:glober, helvetica, arial, sans-serif; font-weight:300; font-size:16px;}
+#footer .wpcf7 :-ms-input-placeholder {color:#6ca33f;font-family:glober, helvetica, arial, sans-serif; font-weight:300; font-size:16px;}
+#footer .wpcf7 .wpcf7-submit{ float:right; box-shadow:0 6px 0 #568232; padding:15px 10px; background-color:#6ca33f; font-family:glober , helvetica, arial, sans-serif; font-size:16px}
 
 /*******************************************************************************************/
 /*************************************BXSLIDER**********************************************/
 /*******************************************************************************************/
+/** RESET AND LAYOUT
+===================================*/
+
 .bx-wrapper {
 	position: relative;
-	padding: 0;
+	padding: 0 0 20px 0;
+	*zoom: 1;
 }
 
 .bx-wrapper img {
 	max-width: 100%;
-	display: block;
+	display: inline-block;
 }
 
 /** THEME
 ===================================*/
+
+.bx-wrapper .bx-viewport {
+	min-height:280px !important;
+}
 
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
@@ -160,7 +321,7 @@ p {  }
 
 .bx-wrapper .bx-loading {
 	min-height: 50px;
-	background: url(images/bx_loader.gif) center center no-repeat #fff;
+	background: url(images/bx_loader.gif) center center no-repeat;
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -174,7 +335,6 @@ p {  }
 .bx-wrapper .bx-pager {
 	text-align: center;
 	font-size: .85em;
-	font-family: Arial;
 	font-weight: bold;
 	color: #666;
 	padding-top: 20px;
@@ -209,21 +369,21 @@ p {  }
 
 .bx-wrapper .bx-prev {
 	left: 10px;
-	background: url(images/imgs.png) no-repeat -20px -4px;
+	background: url(js/controls.png) no-repeat 0 -32px;
 }
 
 .bx-wrapper .bx-next {
 	right: 10px;
-	background: url(images/imgs.png) no-repeat -50px -4px;;
+	background: url(js/controls.png) no-repeat -43px -32px;
 }
 
-/*.bx-wrapper .bx-prev:hover {
+.bx-wrapper .bx-prev:hover {
 	background-position: 0 0;
 }
 
 .bx-wrapper .bx-next:hover {
 	background-position: -43px 0;
-}*/
+}
 
 .bx-wrapper .bx-controls-direction a {
 	position: absolute;
@@ -252,7 +412,7 @@ p {  }
 	width: 10px;
 	height: 11px;
 	outline: 0;
-	background: url(images/controls.png) -86px -11px no-repeat;
+	background: url(js/controls.png) -86px -11px no-repeat;
 	margin: 0 3px;
 }
 
@@ -267,7 +427,7 @@ p {  }
 	width: 9px;
 	height: 11px;
 	outline: 0;
-	background: url(images/controls.png) -86px -44px no-repeat;
+	background: url(js/controls.png) -86px -44px no-repeat;
 	margin: 0 3px;
 }
 
@@ -294,10 +454,7 @@ p {  }
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	/*background: #666\9;
-	background: rgba(80, 80, 80, 0.75);*/
 	width: 100%;
-	background-image:url(images/slide-caption.png); background-repeat:repeat-x; background-position:top center;
 }
 
 .bx-wrapper .bx-caption span {
@@ -308,18 +465,6 @@ p {  }
 	padding: 10px;
 }
 
-.bx-wrapper .bx-caption span p{ margin: 0}
-
-.bx-wrapper h2{ font-weight:300; margin:5px 0;}
-
-
-/*#bx-pager {
-background-color: #555;
-}*/
-
-#bx-pager {
-margin-top: 4px;
-}
 
 
 /*******************************************************************************************/
