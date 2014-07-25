@@ -233,6 +233,31 @@ p {  }
 
 .menu-insider li a{padding: 15px 30px; color:#fff; display:block}
 
+.video{ background-color:#fafafa; border-bottom:1px solid #cfcfcf}
+.videocontent{color:#b5b5b5; font-family:source sans pro , helvetica, arial, sans-serif; line-height:170%; font-size:15px; font-weight:300 }
+.videocontent p{padding:20px 20px 20px 0;}
+
+.tip{ padding:10px 0; border-bottom:1px solid #cfcfcf}
+.tip h4{ font-weight:700; color:#b5b5b5;}
+.tip .numerodetip {display: inline-block;font-size: 12px;color: #fff;background-color: #ed8484 ;padding: 10px 14px;border-radius: 20px;margin-right: 5px;font-weight: 700;}
+.tip p{ font-size:14px; font-family: source sans pro, helvetica, arial, sans-serif; font-weight:300; line-height:150%; padding-left: 40px; color:#b5b5b5}
+
+.testimonio{ padding:20px 0; border-bottom:1px solid #cfcfcf}
+.testimonio .img-testimonio{ }
+.testimonio .img-testimonio img{ width:80px; height:80px;border-radius:50px;}
+.testimonio .txt-testimonio{ font-size:15px; font-family: source sans pro, helvetica, arial, sans-serif; font-weight:300; line-height:150%; color:#b5b5b5}
+.testimonio .txt-testimonio span{ font-size:20px;}
+
+
+.page-id-15 h2{ color:#e26e6f; font-weight:700}
+.page-id-15 #undermain { border-top:10px solid #ed8484;}
+#undermain{ background-attachment:fixed; background-position:top center; background-repeat:no-repeat; background-size:cover;}
+
+#undermain .container{ background-color:#fff;}
+
+.content h3{ font-weight:700; letter-spacing:0px; color:#b5b5b5;}
+.content p{color:#b5b5b5;line-height:150%; font-family:source sans pro, helvetica, arial, sans-serif;padding-bottom:30px; font-size:15px; font-weight:300 }
+
 /*******************************************************************************************/
 /*************************************PAGINATION********************************************/
 /*******************************************************************************************/

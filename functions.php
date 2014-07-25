@@ -74,7 +74,7 @@ function clinicas_register() {
 		'has_archive' => false,
         'hierarchical' => false,
         'rewrite' => array( 'slug' => 'clinicas'),
-        'supports' => array('title', 'excerpt' , 'thumbnail' )
+        'supports' => array('title' ,'excerpt' , 'thumbnail' )
     );
     register_post_type('clinicas', $args);
     flush_rewrite_rules();
@@ -92,7 +92,7 @@ function tips_register() {
 		'has_archive' => true,
         'hierarchical' => false,
         'rewrite' => array( 'slug' => 'tips'),
-        'supports' => array('title', 'excerpt' , 'thumbnail' )
+        'supports' => array('title', 'editor', 'excerpt' , 'thumbnail' )
     );
     register_post_type('tips', $args);
     flush_rewrite_rules();
@@ -110,7 +110,7 @@ function testimonios_register() {
 		'has_archive' => true,
         'hierarchical' => false,
         'rewrite' => array( 'slug' => 'testimonios'),
-        'supports' => array('title', 'excerpt' , 'thumbnail' )
+        'supports' => array('title', 'editor', 'excerpt' , 'thumbnail' )
     );
     register_post_type('testimonios', $args);
     flush_rewrite_rules();
@@ -128,7 +128,7 @@ function videos_register() {
 		'has_archive' => true,
         'hierarchical' => false,
         'rewrite' => array( 'slug' => 'videos'),
-        'supports' => array('title', 'excerpt' , 'thumbnail' )
+        'supports' => array('title', 'editor', 'excerpt' , 'thumbnail' )
     );
     register_post_type('videos', $args);
     flush_rewrite_rules();
