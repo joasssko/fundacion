@@ -58,7 +58,85 @@ function slider_register() {
     flush_rewrite_rules();
 }
 
-//register_taxonomy("posiciones", array('banners'), array("hierarchical" => true, "label" => "Posiciones", "singular_label" => "Posición", "rewrite" => true));
+
+
+
+
+add_action('init', 'clinicas_register');
+function clinicas_register() {
+    $args = array(
+        'label' => 'Clinicas',
+        'singular_label' => 'Clinica',
+        'public' => true,
+		'menu_position' => 15, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+		'has_archive' => false,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'clinicas'),
+        'supports' => array('title', 'excerpt' , 'thumbnail' )
+    );
+    register_post_type('clinicas', $args);
+    flush_rewrite_rules();
+}
+
+add_action('init', 'tips_register');
+function tips_register() {
+    $args = array(
+        'label' => 'Tips',
+        'singular_label' => 'Tip',
+        'public' => true,
+		'menu_position' => 15, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+		'has_archive' => true,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'tips'),
+        'supports' => array('title', 'excerpt' , 'thumbnail' )
+    );
+    register_post_type('tips', $args);
+    flush_rewrite_rules();
+}
+
+add_action('init', 'testimonios_register');
+function testimonios_register() {
+    $args = array(
+        'label' => 'Testimonios',
+        'singular_label' => 'Testimonio',
+        'public' => true,
+		'menu_position' => 15, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+		'has_archive' => true,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'testimonios'),
+        'supports' => array('title', 'excerpt' , 'thumbnail' )
+    );
+    register_post_type('testimonios', $args);
+    flush_rewrite_rules();
+}
+
+add_action('init', 'videos_register');
+function videos_register() {
+    $args = array(
+        'label' => 'Videos',
+        'singular_label' => 'Video',
+        'public' => true,
+		'menu_position' => 16, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+		'has_archive' => true,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'videos'),
+        'supports' => array('title', 'excerpt' , 'thumbnail' )
+    );
+    register_post_type('videos', $args);
+    flush_rewrite_rules();
+}
+
+register_taxonomy("seccion", array('tips', 'testimonios', 'videos'), array("hierarchical" => true, "label" => "Seccion", "singular_label" => "Seccion", "rewrite" => true));
+
+
 
 
 ?>

@@ -219,7 +219,7 @@ p {  }
 /*************************************PAGE**************************************************/
 /*******************************************************************************************/
 
-.page #bigcarousel{ height:580px; background-position:center top; background-repeat:no-repeat; background-size:cover; background-attachment:fixed;}
+.page #bigcarousel{ height:580px; background-position:center top; background-repeat:no-repeat; background-size:cover; background-attachment:fixed; margin-bottom:-45px;}
 
 
 .page #bigcarousel .cols{ height: 580px;color:#fff}
@@ -227,6 +227,11 @@ p {  }
 .page #bigcarousel .cols p{ line-height:150%; font-family: source sans pro, helvetica, arial , sans-serif; font-weight:300}
 
 .page #bigcarousel .cols a{ padding:15px 10px; color:#ed8484; background-color:#fff; box-shadow:0 6px 0 #d7d7d7; font-size:16px; font-family: glober, helvetica, arial, sans-serif; font-weight:700; min-width:272px; float:right; text-align:center }
+
+.menu-insider{ margin:0 !important}
+.menu-insider li{float: left; list-style:none; color:#fff; font-size: 13px; font-family: source sans pro, helvetica, arial, sans-serif; text-align:center   }
+
+.menu-insider li a{padding: 15px 30px; color:#fff; display:block}
 
 /*******************************************************************************************/
 /*************************************PAGINATION********************************************/
