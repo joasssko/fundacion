@@ -59,7 +59,7 @@
 				<li>
 					<div class="box">
 						<h2>Mujer Descubre tus Piernas</h2>
-						<img src="<?php bloginfo('template_directory')?>/images/mujer.png" alt="" />
+						<a href="<?php echo get_page_link(15)?>"><img src="<?php bloginfo('template_directory')?>/images/mujer.png" alt="" /></a>
 						<p>Typi non habent claritem insitam; est usus legentis in iis qui.</p>
 					</div>
 				</li>

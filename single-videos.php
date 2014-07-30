@@ -1,5 +1,15 @@
 <?php get_header()?>
 
+
+<div id="bigcarousel">
+	
+			
+			<iframe src="//player.vimeo.com/video/<?php echo get_field('video_id')?>" width="100%" height="580" frameborder="0" portrait="0" color="ed8484" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			
+			<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
 <div id="undermain">
 	<div class="container">
 		<div class="row">
@@ -8,7 +18,6 @@
 				<div class="content">
 					<div class="clear separator"></div>
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-						<h1><?php the_title()?></h1>
 						<?php echo apply_filters('the_content', get_the_content())?>
 					<?php endwhile; else: ?>
 					Sorry, no posts matched your criteria.
@@ -41,5 +50,4 @@
 		</div>
 	</div>
 </div>
-
 <?php get_footer()?>

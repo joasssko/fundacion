@@ -1,25 +1,51 @@
 <?php get_header()?>
 
-<div id="undermain">
+<?php 
+$var = get_queried_object();
+$tipo = $var->taxonomy;
+$type = $var->slug;
+$typoID = $var->term_id;
+
+?>
+
+<div id="bigcarousel" style="background-image:url(<?php echo get_field('superbackground' , $tipo.'_'.$typoID)?>)">
+	<div class="container">
+		<div class="row">
+			
+			
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+
+<div id="undermain" style="background-image:url(<?php echo get_field('superbackground_b' , $post->ID)?>)">
 	<div class="container">
 		<div class="row">
 		
 			<div class="col-md-8">
 				<div class="content">
-					<div class="clear separator"></div>
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-						<h1><?php the_title()?></h1>
-						<?php echo apply_filters('the_content', get_the_content())?>
-					<?php endwhile; else: ?>
-					Sorry, no posts matched your criteria.
-					<?php endif; ?>
+					
+					<h2>¿Cómo prevenir?</h2>
+					<?php 
+					$tipscount = 0; 
+					foreach ($posts as $post):
+					$tipscount++;?>
+					
+						<div class="tip">
+							<h4><span class="numerodetip"><?php echo $tipscount?></span> <?php echo $post->post_title?></h4>
+							<p><?php echo substr($post->post_content , 0 , 90)?> ...</p>
+						</div>
+					
+					<?php endforeach; ?>
+					
 				</div>
 			</div>
-			<?php wp_reset_query()?>
+			
 			<div class="col-md-4">
 				<h2>Testimonios</h2>
 				
-				<?php $testimonios = get_posts(array( 'post_type' => 'testimonios' , 'posts_per_page' => '2' ));
+				<?php $testimonios = get_posts(array( 'post_type' => 'testimonios' , 'seccion' => $type , 'posts_per_page' => '2' ));
 				foreach ($testimonios as $testimonio):?>
 				<div class="testimonio">
 					<div class="img-testimonio alignleft">
@@ -36,10 +62,10 @@
 				<div class="separator"></div>
 				
 				
+				
 			</div>
 			
 		</div>
 	</div>
 </div>
-
 <?php get_footer()?>

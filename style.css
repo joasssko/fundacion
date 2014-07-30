@@ -182,6 +182,8 @@ p {  }
 .noticia.mini-noticia{ width:330px; height:205px;}
 .noticia.n05 , .noticia.n06{ margin-left:5px;}
 
+
+
 .noticia .base{ position:relative; z-index:1;}
 .noticia .linker{ position:relative; z-index:2;}
 .noticia .sharer{ position:relative; z-index:3}
@@ -220,8 +222,6 @@ p {  }
 /*******************************************************************************************/
 
 .page #bigcarousel{ height:580px; background-position:center top; background-repeat:no-repeat; background-size:cover; background-attachment:fixed; margin-bottom:-45px;}
-
-
 .page #bigcarousel .cols{ height: 580px;color:#fff}
 .page #bigcarousel .cols h1 , .page #bigcarousel .cols .btn{ margin-top:400px; }
 .page #bigcarousel .cols p{ line-height:150%; font-family: source sans pro, helvetica, arial , sans-serif; font-weight:300}
@@ -255,8 +255,26 @@ p {  }
 
 #undermain .container{ background-color:#fff;}
 
-.content h3{ font-weight:700; letter-spacing:0px; color:#b5b5b5;}
+.content h3{ font-weight:700; letter-spacing:0px; color:#b5b5b5; margin-top: 0px;}
 .content p{color:#b5b5b5;line-height:150%; font-family:source sans pro, helvetica, arial, sans-serif;padding-bottom:30px; font-size:15px; font-weight:300 }
+
+.content .thumbnail img {border-radius: 100px;}
+.content .thumbnail {border: none;}
+.content .thumbnail .caption{}
+.content .thumbnail .caption h4{ margin:0px; font-weight:700; color:#8c8c8c}
+.content .thumbnail .caption p{ padding:0px !important; line-height:100%; margin-bottom:0px; font-size:10px; font-style:italic}
+
+
+.morelink {float: right;padding: 20px 0;font-family: source sans pro, helvetica, arial, sans-serif;font-weight: 700;text-transform: uppercase;}
+.morelink a{ text-decoration:none;color: #6ca33f;}
+.morelink a:hover{ text-decoration:none;}
+
+.page-id-15 .morelink a{ color:#e36f6f}
+.page-id-15 .content a.btn-default {padding: 15px 10px;color: #fff;background-color: #e36f6f;box-shadow: 0 6px 0 #af5454;font-size: 16px;font-family: glober, helvetica, arial, sans-serif;font-weight: 700;min-width: 272px;float: right;text-align: center; clear:both; margin-bottom:30px; border:none }
+
+.page .noticias{ background-color:#f2f2f2; padding:15px 0 0 0;}
+.page .noticias h2{ font-size:32px; padding:0 0 15px 0; margin:0px; }
+
 
 /*******************************************************************************************/
 /*************************************PAGINATION********************************************/
@@ -291,6 +309,7 @@ p {  }
 /*************************************SINGLE************************************************/
 /*******************************************************************************************/
 
+.single-videos #bigcarousel{ margin-bottom:0px }
 
 .fontSize{ float: right; margin:0px}
 .fontSize li{list-style: none;float: left;display: inline-block;padding: 5px;border: 1px solid #ccc ; line-height: 12px;vertical-align: middle;margin: 0 2px;font-weight: 300;width: 25px;text-align: center;height: 25px;top: 0px;}
@@ -299,6 +318,24 @@ p {  }
 .fontSizeLarge{ font-size:17px;}
 .fontSize li a {color: #333;top: 0px;font-size: 13px;}
 
+body.single{ background-color:#f2f2f2}
+.single #undermain{ margin:20px 0}
+
+/*******************************************************************************************/
+/***************************TAXONOMIAS CATEGORIAS Y TAGS************************************/
+/*******************************************************************************************/
+.archive #bigcarousel{ height:580px; background-position:center top; background-repeat:no-repeat; background-size:cover; background-attachment:fixed; margin-bottom:-45px;}
+.archive #bigcarousel .cols{ height: 580px;color:#fff}
+.archive #bigcarousel .cols h1 , .archive #bigcarousel .cols .btn{ margin-top:260px; }
+.archive #bigcarousel .cols p{ line-height:150%; font-family: source sans pro, helvetica, arial , sans-serif; font-weight:300}
+
+.archive #bigcarousel .cols a{ padding:15px 10px; color:#ed8484; background-color:#fff; box-shadow:0 6px 0 #d7d7d7; font-size:16px; font-family: glober, helvetica, arial, sans-serif; font-weight:700; min-width:272px; float:right; text-align:center }
+
+.archive #bigcarousel{ height:350px; background-position:center top; background-repeat:no-repeat; background-size:cover; background-attachment:fixed; margin-bottom:0px;}
+
+.content .tip p{ padding-bottom: 0px;}
+.category .noticia{ margin-left:5px;}
+.category .noticia.nomargin{ margin-left:0px;}
 
 /******************************************FOOTER*******************************/
 

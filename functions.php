@@ -98,6 +98,24 @@ function tips_register() {
     flush_rewrite_rules();
 }
 
+add_action('init', 'faqs_register');
+function faqs_register() {
+    $args = array(
+        'label' => 'Preguntas Frecuentes',
+        'singular_label' => 'Pregunta',
+        'public' => true,
+		'menu_position' => 15, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+		'has_archive' => true,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'faqs'),
+        'supports' => array('title', 'editor', 'excerpt' , 'thumbnail' )
+    );
+    register_post_type('faqs', $args);
+    flush_rewrite_rules();
+}
+
 add_action('init', 'testimonios_register');
 function testimonios_register() {
     $args = array(
@@ -134,7 +152,7 @@ function videos_register() {
     flush_rewrite_rules();
 }
 
-register_taxonomy("seccion", array('tips', 'testimonios', 'videos'), array("hierarchical" => true, "label" => "Seccion", "singular_label" => "Seccion", "rewrite" => true));
+register_taxonomy("seccion", array('tips', 'testimonios', 'videos' , 'post'), array("hierarchical" => true, "label" => "Seccion", "singular_label" => "Seccion", "rewrite" => true));
 
 
 
