@@ -57,11 +57,10 @@ jQuery(document).ready(function($) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1&appId=1443699349174785";
+  js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1&appId=692872517452883";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<meta property="fb:app_id" content="1443699349174785" />
 </head>
 
 <body <?php body_class();?>>

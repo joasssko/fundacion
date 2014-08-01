@@ -177,8 +177,10 @@ p {  }
 .destacado img{ margin-bottom:40px}
 
 .selector-categorias ul li{ float:left; width:20%; text-align:center; list-style:none; background-color:#c2c2c2; margin-bottom:5px;}
-
 .selector-categorias ul li a{ padding:15px 5px; display:block; color:#fff; font-size:16px; font-family:source sans pro, helvetica, arial, sans-serif; font-weight:700}
+
+.sidebar .selector-categorias li{ width: 100%; text-align:left}
+.sidebar .selector-categorias li a{ padding: 10px 5px;}
 
 .noticias .noticia{ float:left; margin-bottom:5px;}
 .noticia.big-noticia{ margin-right:5px;  width:665px; height:415px;}
@@ -326,7 +328,12 @@ p {  }
 .fontSize li a {color: #333;top: 0px;font-size: 13px;}
 
 body.single{ background-color:#f2f2f2}
-.single #undermain{ margin:20px 0}
+.single #undermain{ top: -45px;
+position: relative;}
+
+.single .superimage{ height:300px; overflow:hidden; }
+.single .superimage img{ width: 100%; height:auto }
+
 
 /*******************************************************************************************/
 /***************************TAXONOMIAS CATEGORIAS Y TAGS************************************/
