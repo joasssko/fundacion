@@ -117,6 +117,9 @@ p {  }
 .clr-fundacion-banmedica{ background-color:rgba(0, 40, 93, .7) !important;}
 .clr-salud-infantil{ background-color:rgba(165, 212, 20, .7)!important;}
 
+.clr-quienes-somos{background-color:rgba(0,40,93,.7) !important}
+.clr-vive-sano{ background-color:rgba(255,78,0,.7) !important}
+
 /*******************************************************************************************/
 /*************************************HEADER************************************************/
 /*******************************************************************************************/
@@ -124,7 +127,7 @@ p {  }
 #topbar{ font-size:13px; padding:5px 0; background-color:#00285d}
 #menu-secundario{ margin:0px; float:right; font-family:glober, helvetica, arial, sans-serif; }
 #menu-secundario li{ float:left; list-style:none}
-#menu-secundario li a{ color:#fff; line-height:100%; font-family:glober, helvetica, arial, sans-serif; font-weight:700 }
+#menu-secundario li a{ color:#fff; line-height:100%; font-family:glober, helvetica, arial, sans-serif; font-weight:700; padding:0 20px }
 
 #header{ background-color:#fff; border-bottom: 1px solid #f2f2f2; box-shadow:0 2px 5px rgba(0,0,0,.5); position:relative; z-index:2;}
 
@@ -151,7 +154,7 @@ p {  }
 .socialbadges div span{ color:#fff; display:block; }
 .socialbadges div a:hover{ text-decoration:none}
 
-
+#undermain .col-md-8{ background-color:#fafafa}
 
 /*******************************************************************************************/
 /*************************************HOME**************************************************/
@@ -170,7 +173,7 @@ p {  }
 
 .destacado{ padding:30px 0; color:#8e8e8e; font-family: source sans pro, helvetica, arial, sans-serif}
 .destacado p{ font-size:14px; font-weight:300; line-height:150%; padding-bottom:15px;}
-.destacado a{ padding:10px 10px 10px 14px; font-size:14px; font-family:source sans pro, helvetica, arial, sans-serif; background-color:#46658e; color:#fff; border-radius:5px; }
+.destacado a.morelinkk{ padding:10px 10px 10px 14px; font-size:14px; font-family:source sans pro, helvetica, arial, sans-serif; background-color:#46658e; color:#fff; border-radius:5px; }
 .destacado img{ margin-bottom:40px}
 
 .selector-categorias ul li{ float:left; width:20%; text-align:center; list-style:none; background-color:#c2c2c2; margin-bottom:5px;}
@@ -242,6 +245,8 @@ p {  }
 .tip .numerodetip {display: inline-block;font-size: 12px;color: #fff;background-color: #ed8484 ;padding: 10px 14px;border-radius: 20px;margin-right: 5px;font-weight: 700;}
 .tip p{ font-size:14px; font-family: source sans pro, helvetica, arial, sans-serif; font-weight:300; line-height:150%; padding-left: 40px; color:#b5b5b5}
 
+.page-id-13 .numerodetip{background-color: #0b97e0}
+
 .testimonio{ padding:20px 0; border-bottom:1px solid #cfcfcf}
 .testimonio .img-testimonio{ }
 .testimonio .img-testimonio img{ width:80px; height:80px;border-radius:50px;}
@@ -255,11 +260,13 @@ p {  }
 
 #undermain .container{ background-color:#fff;}
 
+#undermain p{color:#b5b5b5;line-height:150%; font-family:source sans pro, helvetica, arial, sans-serif;padding-bottom:15px; font-size:15px; font-weight:300 }
+
 .content h3{ font-weight:700; letter-spacing:0px; color:#b5b5b5; margin-top: 0px;}
 .content p{color:#b5b5b5;line-height:150%; font-family:source sans pro, helvetica, arial, sans-serif;padding-bottom:30px; font-size:15px; font-weight:300 }
 
-.content .thumbnail img {border-radius: 100px;}
-.content .thumbnail {border: none;}
+.content .thumbnail img {border-radius: 100px; background-color:transparent}
+.content .thumbnail {border: none; background-color:transparent}
 .content .thumbnail .caption{}
 .content .thumbnail .caption h4{ margin:0px; font-weight:700; color:#8c8c8c}
 .content .thumbnail .caption p{ padding:0px !important; line-height:100%; margin-bottom:0px; font-size:10px; font-style:italic}
@@ -542,3 +549,44 @@ body.single{ background-color:#f2f2f2}
 /*******************************************************************************************/
 /*************************************TABLET************************************************/
 /*******************************************************************************************/
+
+
+
+
+
+/*******************************************************************************************/
+/*************************************NAV***************************************************/
+/*******************************************************************************************/
+#menu-navegacion{}
+#menu-navegacion { } 
+#menu-navegacion  li{list-style-type:none; display:inline-block; }
+#menu-navegacion  li a{ }
+
+.menu-item-has-children:hover a{  border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; }
+.current_page_item.menu-item-has-children:hover a{ color:#34495e !important}
+/*...First-Level...*/
+#menu-navegacion  li ul{position:absolute; display:none; width:240px; z-index:999}
+#menu-navegacion  li:hover ul{display:block;}
+#menu-navegacion  li ul li{display:block; position:relative; border:none; padding: 10px; margin:0px; width:240px;}
+#menu-navegacion  li ul li a{  margin:0px; padding:0px; background-color: transparent}
+
+/*...Second-Level...*/
+#menu-navegacion  li:hover ul ul{display:none}
+#menu-navegacion  li ul li:hover>ul{display:block}
+/*...Third-Level...*/
+#menu-navegacion  li ul li ul{display:none; background:#fff; position:absolute; top:-10%; left:145px; width:140px;}
+
+
+
+.sub-menu {
+	background-color: rgba(255,255,255,.9); }
+
+.sub-menu li {
+	border-bottom:1px solid #f2f2f2;
+	
+}
+
+.sub-menu li a { color:#34495e !important;
+}
+
+.menu-item-has-children{ background-image:url(images/down.png); background-position:bottom center; background-repeat:no-repeat}

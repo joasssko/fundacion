@@ -22,7 +22,7 @@
 	  ?>
 
 	  
-		<div class="item <?php if($scount == 1){echo 'active';}?>" style="background-image:url(<?php echo $thumb_url[0];?>); background-position:center top; height:580px">
+		<div class="item <?php if($scount == 1){echo 'active';}?>" style="background-image:url(<?php echo $thumb_url[0];?>); background-position:center top; height:580px; background-size:cover">
 		  <div class="carousel-caption">
 			<h1><?php echo get_the_title($slide->ID)?></h1>
 			<h3>tation ullamcorper suscipit labortis nusl ul aliquip</h3>
@@ -52,7 +52,7 @@
 				<li>
 					<div class="box">
 						<h2>Pack de la vida</h2>
-						<img src="<?php bloginfo('template_directory')?>/images/pack.png" alt="" />
+						<a href="<?php echo get_page_link(13)?>"><img src="<?php bloginfo('template_directory')?>/images/pack.png" alt="" /></a>
 						<p>Typi non habent claritem insitam; est usus legentis in iis qui.</p>
 					</div>
 				</li>
@@ -66,21 +66,21 @@
 				<li>
 					<div class="box">
 						<h2>Vive Sano</h2>
-						<img src="<?php bloginfo('template_directory')?>/images/vive.png" alt="" />
+						<a href="<?php echo get_page_link(11)?>"><img src="<?php bloginfo('template_directory')?>/images/vive.png" alt="" /></a>
 						<p>Typi non habent claritem insitam; est usus legentis in iis qui.</p>
 					</div>
 				</li>
 				<li>
 					<div class="box">
 						<h2>Pack de la vida</h2>
-						<img src="<?php bloginfo('template_directory')?>/images/pack.png" alt="" />
+						<a href="<?php echo get_page_link(13)?>"><img src="<?php bloginfo('template_directory')?>/images/pack.png" alt="" /></a>
 						<p>Typi non habent claritem insitam; est usus legentis in iis qui.</p>
 					</div>
 				</li>
 				<li>
 					<div class="box">
 						<h2>Vive Sano</h2>
-						<img src="<?php bloginfo('template_directory')?>/images/vive.png" alt="" />
+						<a href="<?php echo get_page_link(11)?>"><img src="<?php bloginfo('template_directory')?>/images/vive.png" alt="" /></a>
 						<p>Typi non habent claritem insitam; est usus legentis in iis qui.</p>
 					</div>
 				</li>
@@ -97,16 +97,16 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="destacado">
-					<img src="<?php bloginfo('template_directory')?>/images/fitbook.png" class="alignleft" alt="" />
+					<a href="http://www.mifitbook.cl/index.php"><img src="<?php bloginfo('template_directory')?>/images/fitbook.png" class="alignleft" alt="" /></a>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
-					<a href="#">Ver Más <span class="fa fa-plus fa-fw"></span></a>
+					<a href="http://www.mifitbook.cl/index.php" class="morelinkk">Ver Más <span class="fa fa-plus fa-fw"></span></a>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="destacado">
-					<img src="<?php bloginfo('template_directory')?>/images/alimentate.png" class="alignleft" alt="" />
+					<a href="http://www.alimentatesano.cl/index.php"><img src="<?php bloginfo('template_directory')?>/images/alimentate.png" class="alignleft" alt="" /></a>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
-					<a href="#">Ver Más <span class="fa fa-plus fa-fw"></span></a>
+					<a href="http://www.alimentatesano.cl/index.php" class="morelinkk">Ver Más <span class="fa fa-plus fa-fw"></span></a>
 				</div>
 			</div>
 		</div>

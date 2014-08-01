@@ -10,7 +10,7 @@
 				<p><?php echo get_the_excerpt()?></p>
 			</div>
 			<div class="col-md-6 cols">
-				<a href="#" class="btn btn-default">Inscríbete en el programa</a>
+				<!--<a href="#" class="btn btn-default">Inscríbete en el programa</a> -->
 			</div>
 			<div class="clear"></div>
 		</div>
