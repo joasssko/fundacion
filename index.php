@@ -1,27 +1,21 @@
 <?php get_header()?>
 
+<?php /* ?>
 <div id="bigcarousel">
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
 	  <!-- Indicators -->
 	  <ol class="carousel-indicators">
 		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
 	  </ol>
-	
 	  <div class="carousel-inner">
-	  
-	  
 	  <?php $slides = get_posts(array('post_type'=>'slider' , 'posts_per_page'=>4));?>
 	  <?php $scount = 0?>
 	  <?php foreach($slides as $slide):$scount++?>
-	  
 	  <?php
 		$thumb_id = get_post_thumbnail_id($slide->ID);
 		$thumb_url = wp_get_attachment_image_src($thumb_id,'full', true);
 	  ?>
-
-	  
 		<div class="item <?php if($scount == 1){echo 'active';}?>" style="background-image:url(<?php echo $thumb_url[0];?>); background-position:center top; height:580px; background-size:cover">
 		  <div class="carousel-caption">
 			<h1><?php echo get_the_title($slide->ID)?></h1>
@@ -30,19 +24,61 @@
 		  </div>
 		</div>
 	  <?php endforeach;?>
-
 	  </div>
-	
 	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 		<span class="fa fa-chevron-left"></span>
 	  </a>
 	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
 		<span class="fa fa-chevron-right"></span>
 	  </a>
+	</div>
+</div>
+<?php  */?>
+
+
+<div id="bigcarousel">
+	
+	<div id="slides">
+	  <ul class="slides-container">
+		
+		<?php $slides = get_posts(array('post_type'=>'slider' , 'posts_per_page'=>4));?>
+	  	<?php $scount = 0?>
+	  	<?php foreach($slides as $slide):$scount++?>
+		<?php
+		$thumb_id = get_post_thumbnail_id($slide->ID);
+		$thumb_url = wp_get_attachment_image_src($thumb_id,'full', true);
+	  	?>
+		<li style="background-image:url(<?php echo $thumb_url[0];?>); background-position:center top; height:580px; background-size:cover !important">
+		  <?php //echo get_the_post_thumbnail($slide->ID , 'full')?>
+		  <div class="carousel-caption">
+			<h1><?php echo get_the_title($slide->ID)?></h1>
+			<h3>tation ullamcorper suscipit labortis nusl ul aliquip</h3>
+			<p><?php echo $slide->post_excerpt?></p>
+		  </div>
+		</li>
+		<?php endforeach;?>
+		
+		
+	  </ul>
+	  <nav class="slides-navigation">
+		<a href="#" class="next"><span class="fa fa-chevron-right"></span></a>
+		<a href="#" class="prev"><span class="fa fa-chevron-left"></span></a>
+	  </nav>
+	  
+	  
 	  
 	</div>
 	
+	
+	<script>
+	jQuery(document).ready(function($) {
+		jQuery('#slides').superslides();
+	});
+  </script>
+	
+	
 </div>
+
 
 <div id="rapidos">
 	<div class="container">
@@ -53,35 +89,42 @@
 					<div class="box">
 						<h2>Pack de la vida</h2>
 						<a href="<?php echo get_page_link(13)?>"><img src="<?php bloginfo('template_directory')?>/images/pack.png" alt="" /></a>
-						<p>Typi non habent claritem insitam; est usus legentis in iis qui.</p>
+						<p>Es una iniciativa pionera en el país, que busca entregar una solución concreta a las personas, para que puedan prevenir las Enfermedades Crónicas No Transmisibles.</p>
 					</div>
 				</li>
 				<li>
 					<div class="box">
 						<h2>Mujer Descubre tus Piernas</h2>
 						<a href="<?php echo get_page_link(15)?>"><img src="<?php bloginfo('template_directory')?>/images/mujer.png" alt="" /></a>
-						<p>Typi non habent claritem insitam; est usus legentis in iis qui.</p>
+						<p>Las várices no sólo afectan la salud, sino la autoestima y la calidad de vida, es por eso que esta campaña busca brindar una solución a las chilenas aquejadas por esta patología.</p>
 					</div>
 				</li>
 				<li>
 					<div class="box">
 						<h2>Vive Sano</h2>
 						<a href="<?php echo get_page_link(11)?>"><img src="<?php bloginfo('template_directory')?>/images/vive.png" alt="" /></a>
-						<p>Typi non habent claritem insitam; est usus legentis in iis qui.</p>
+						<p>Es uno de nuestros primeros programas, el cual busca reducir los índices de obesidad infantil mediante un modelo de intervención  dentro de los colegios.</p>
 					</div>
 				</li>
 				<li>
 					<div class="box">
 						<h2>Pack de la vida</h2>
 						<a href="<?php echo get_page_link(13)?>"><img src="<?php bloginfo('template_directory')?>/images/pack.png" alt="" /></a>
-						<p>Typi non habent claritem insitam; est usus legentis in iis qui.</p>
+						<p>Es una iniciativa pionera en el país, que busca entregar una solución concreta a las personas, para que puedan prevenir las Enfermedades Crónicas No Transmisibles.</p>
 					</div>
 				</li>
 				<li>
 					<div class="box">
 						<h2>Vive Sano</h2>
 						<a href="<?php echo get_page_link(11)?>"><img src="<?php bloginfo('template_directory')?>/images/vive.png" alt="" /></a>
-						<p>Typi non habent claritem insitam; est usus legentis in iis qui.</p>
+						<p>Es uno de nuestros primeros programas, el cual busca reducir los índices de obesidad infantil mediante un modelo de intervención  dentro de los colegios.</p>
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						<h2>Mujer Descubre tus Piernas</h2>
+						<a href="<?php echo get_page_link(15)?>"><img src="<?php bloginfo('template_directory')?>/images/mujer.png" alt="" /></a>
+						<p>Las várices no sólo afectan la salud, sino la autoestima y la calidad de vida, es por eso que esta campaña busca brindar una solución a las chilenas aquejadas por esta patología.</p>
 					</div>
 				</li>
 			</ul>
@@ -98,14 +141,14 @@
 			<div class="col-md-6">
 				<div class="destacado">
 					<a href="http://www.mifitbook.cl/index.php"><img src="<?php bloginfo('template_directory')?>/images/fitbook.png" class="alignleft" alt="" /></a>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+					<p>Es un sitio web interactivo donde los adolescentes pueden autoevaluarse en estilos de vida saludables, mediante una herramienta hecha específicamente para ellos.</p>
 					<a href="http://www.mifitbook.cl/index.php" class="morelinkk">Ver Más <span class="fa fa-plus fa-fw"></span></a>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="destacado">
 					<a href="http://www.alimentatesano.cl/index.php"><img src="<?php bloginfo('template_directory')?>/images/alimentate.png" class="alignleft" alt="" /></a>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+					<p>Es un sitio web interactivo que ayuda a combatir enfermedades crónicas causadas por malos hábitos de vida a través de un registro personalizado.</p>
 					<a href="http://www.alimentatesano.cl/index.php" class="morelinkk">Ver Más <span class="fa fa-plus fa-fw"></span></a>
 				</div>
 			</div>
@@ -164,14 +207,12 @@
 			<?php endforeach;?>
 			<script type="text/javascript">
 			jQuery(document).ready(function($) {
-				$('.noticia .base').mouseover(function(event) {
-					$(this).parent('.noticia').find('.linker a').fadeIn('fast', function() {
-						$(this).mouseleave(function(event) {
-							$(this).fadeOut('fast')
-						});
-					});
+				jQuery('.noticia .base').hover(function() {
+					jQuery(this).parent('.noticia').find('.linker a').fadeIn('fast')
+				}, function() {
+					jQuery(this).parent('.noticia').find('.linker a').mouseleave().fadeOut('fast')
 				});
-			});		
+			});
 			</script>
 			</div>
 			
@@ -186,9 +227,8 @@
 		<div class="row">
 			<div class="col-md-5 col-md-offset-7 cols">
 				<h1>¿Por qué nace la fundación?</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue sollicitudin felis. Curabitur vitae tortor ac lectus luctus euismod a malesuada orci. Aliquam sit amet tortor quis erat fringilla vestibulum. Ut dapibus nisi id felis egestas mollis. </p>
-				<p>Proin vehicula eros in enim accumsan congue. Cras consectetur et est at posuere. Ut aliquam leo in mollis tincidunt. Mauris hendrerit rutrum porta. Fusce dapibus arcu eu dui sollicitudin, sit amet ultricies purus bibendum. </p>
-				<a href="#" class="btn btn-default">SABER MÁS</a>
+				<p><?php echo get_field('por_que_nace' , 9)?></p>
+				<a href="<?php echo get_page_link(9)?>" class="btn btn-success">Saber más</a>
 			</div>
 		</div>
 	</div>

@@ -19,21 +19,32 @@ $typoID = $var->term_id;
 </div>
 <div class="clear"></div>
 
-<div id="undermain" style="background-image:url(<?php echo get_field('superbackground_b' , $post->ID)?>)">
+<?php if($type=='mujer'){?>
+<div id="insidemenu" class="clr-mujer-descubre-tus-piernas" style="margin-top:-45px;">
+	<div class="container">
+		<div class="row">			
+			<?php $menu = get_field('menu_inside_selector')?>
+			<?php wp_nav_menu( array('menu' => 'Mujer descubre tus piernas' , 'container' => 'none' , 'menu_id' =>  'mujer-descubre-tus-piernas' , 'menu_class' => 'menu-insider'));?>
+		</div>
+	</div>
+</div>
+<?php }?>
+
+<div id="undermain" style="background-image:url(<?php echo get_field('superbackground_b' , $post->ID)?>); <?php if($type !='mujer'){ echo 'margin-top: -42px;';}?>">
 	<div class="container">
 		<div class="row">
 		
 			<div class="col-md-8">
 				<div class="content">
 					
-					<h2>¿Cómo prevenir?</h2>
+					<h2>Consejos</h2>
 					<?php 
 					$tipscount = 0; 
 					foreach ($posts as $post):
 					$tipscount++;?>
 					
 						<div class="tip">
-							<h4><span class="numerodetip"><?php echo $tipscount?></span> <?php echo $post->post_title?></h4>
+							<h4><span class="numerodetip clr-<?php echo $type ;?>"><?php echo $tipscount?></span> <?php echo $post->post_title?></h4>
 							<p><?php echo substr($post->post_content , 0 , 90)?> ...</p>
 						</div>
 					
@@ -57,7 +68,7 @@ $typoID = $var->term_id;
 					<div class="clear"></div>
 				</div>
 				<?php endforeach;?>
-				<div class="morelink"><a href="<?php echo get_post_type_archive_link('tips')?>">Ver más videos <span class="fa fa-plus fa-fw"></span></a></div>
+				<div class="morelink"><a href="<?php echo get_post_type_archive_link('testimonios')?>/?seccion/<?php echo $type?>">Ver más testimonios <span class="fa fa-plus fa-fw"></span></a></div>
 				
 				<div class="separator"></div>
 				

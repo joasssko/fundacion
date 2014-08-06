@@ -37,16 +37,14 @@ $typoID = $var->term_id;
 			<div class="col-md-8">
 				<div class="content">
 					
-					<h2>Testimonios</h2>
+					<h2>Preguntas Frecuentes</h2>
 					<?php 
 					foreach ($posts as $post):?>
 					<div class="testimonio">
-						<div class="img-testimonio alignleft">
-							<a href="<?php echo get_the_permalink($post->ID)?>"><?php echo get_the_post_thumbnail($post->ID , 'thumbnail')?></a>
-						</div>
 						<div class="txt-testimonio">
-							<img src="<?php bloginfo('template_directory')?>/images/upperq.png" class="qte" alt="" /><?php echo substr($post->post_content , 0 , 200)?> ...<img src="<?php bloginfo('template_directory')?>/images/lowerq.png" class="qte" alt="" />
+							<?php echo '<h3>'.$post->post_title.'</h3>';?>
 						</div>
+						<?php echo apply_filters('the_content' , $post->post_content)?>
 						<div class="clear"></div>
 					</div>
 					<?php endforeach;?>

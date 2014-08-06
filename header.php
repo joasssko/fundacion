@@ -13,7 +13,7 @@
 <link rel="shortcut icon" href="<?php bloginfo('template_directory')?>/favicon.ico"/>
 <link rel="icon" type="image/png" href="<?php bloginfo('template_directory')?>/favicon.png" />
 
-<meta name="viewport" content="width=device-width, initial-scale=0.75 , minimum-scale=1.0 ,  maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -61,11 +61,134 @@ jQuery(document).ready(function($) {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+
+<?php if(is_page(6)){?>
+    
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4Q4boUQ9F5xiVwST3k2gZadwCMUYBBxE&sensor=true&languaje=es">
+    </script>
+    <script type="text/javascript">
+	
+	// Enable the visual refresh
+	google.maps.visualRefresh = true;
+      function initialize() {
+		/***********estilo de mapa***********/
+		var styles = [
+			{
+				featureType: 'all',
+          		elementType: 'all',
+				
+			  stylers: [
+			    { hue: "#81a748" },
+				{lightness: '-20'},
+				{gamma: 1.5}
+		 			   ]
+			},{
+				
+			  featureType: "road.highway",
+			  elementType: "geometry",
+			  stylers: [
+				{ lightness: 40 },
+				{ visibility: "simplified" }
+			  ]
+			},{
+			  featureType: "road",
+			  elementType: "labels",
+			  stylers: [
+				{ visibility: "ff" }
+			  ]
+			},
+			
+			{
+          	featureType: 'poi',
+          	elementType: 'all',
+          	stylers: [
+            { visibility: 'off' }
+          ]
+        }
+		  ];
+		
+		  // Create a new StyledMapType object, passing it the array of styles,
+		  // as well as the name to be displayed on the map type control.
+		  var styledMap = new google.maps.StyledMapType(styles,
+			{name: "Fundación Banmédica"});
+		
+		
+		var myLatlng = new google.maps.LatLng(-33.4160187,-70.5931259);  
+        var mapOptions = {
+          center: myLatlng,
+          zoom: 15,
+		  panControl: false,
+    	  zoomControl: true,
+   		  scaleControl: true,
+		  mapTypeControl: true,
+ 		  streetViewControl: true,
+  		  overviewMapControl: true,
+		  draggable:false,
+		  scrollwheel: false,
+		  mapTypeControlOptions: {
+      		style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+			position: google.maps.ControlPosition.TOP_RIGHT,
+			mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE , google.maps.MapTypeId.TERRAIN, 'map_style']
+   		  },
+		  zoomControlOptions: {
+      		style: google.maps.ZoomControlStyle.SMALL,
+			position: google.maps.ControlPosition.BOTTOM_LEFT
+   		  },
+          mapTypeId: google.maps.MapTypeId.HYBRID
+		  
+        };
+		
+		
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+    		mapOptions);
+			
+			//Associate the styled map with the MapTypeId and set it to display.
+ 			map.mapTypes.set('map_style', styledMap);
+  			map.setMapTypeId('map_style');
+		
+		var image = '<?php bloginfo('template_directory')?>/images/spot.png';	
+		var myLatlng = new google.maps.LatLng(-33.4160187,-70.5931259);
+		var marker = new google.maps.Marker({
+      		position: myLatlng,
+     		map: map,
+      		title: 'hola',
+			icon : image
+  		});
+		
+		/* var contentString = '<div id="content" style=" background-color:#fff; color:#525225"><h3 style="color:#525252 !important; font-size: 14px !important"><?php the_title()?></h3></div>';
+
+		var infowindow = new google.maps.InfoWindow({
+			content: contentString
+		}); */
+		
+		
+
+
+
+
+
+google.maps.event.addListener(marker, 'click', function() {
+  infowindow.open(map,marker);
+});
+		
+		 google.maps.event.addListener(map, 'click', function(event){
+          map.setOptions({draggable: true, scrollwheel: true});
+        }); 
+		
+			
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+<?php }?>
+
+
 </head>
 
 <body <?php body_class();?>>
 
-<div id="topbar">
+<div id="topbar" class="navbar-fixed-top">
 	<div class="container">
 		<div class="row">
 			<?php wp_nav_menu( array( 'container' => 'none', 'menu_class' => 'topmenu' , 'theme_location' => 'secondary' ) );?>
@@ -73,15 +196,29 @@ jQuery(document).ready(function($) {
 	</div>
 </div>
 
-<div id="header">
+<div id="header" class="navbar-fixed-top">
 	<div class="container">
 		<div class="row">
 		
 			<div class="col-md-3">
-				<div class="row"><a href="<?php bloginfo('url')?>" class="izq"><img src="<?php bloginfo('template_directory')?>/images/logo.png" alt="" id="logo" /></a></div>
+				<div class="row">
+					<a href="<?php bloginfo('url')?>" class="izq">
+						<img src="<?php bloginfo('template_directory')?>/images/logo.png" alt="" id="logo" />
+					</a>
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuprincipal">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					</div>
+				</div>
 			</div>
 			<div class="col-md-9">
-				<div class="row"><?php wp_nav_menu( array( 'container' => 'none', 'menu_class' => 'clearfix nav' , 'theme_location' => 'primary' ) );?></div>
+				<div class="row">
+					<?php wp_nav_menu( array( 'container' => 'div', 'menu_class' => 'clearfix nav' , 'container_class' => 'collapse navbar-collapse' ,  'container_id' => 'menuprincipal',   'theme_location' => 'primary' ) );?>
+				</div>
 			</div>
 			
 			<div class="clear"></div>
@@ -89,7 +226,7 @@ jQuery(document).ready(function($) {
 	</div>
 </div>
 
-<div class="searchandsocial">
+<div class="searchandsocial navbar-fixed-top">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5 col-md-offset-7">

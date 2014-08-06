@@ -13,7 +13,24 @@
 					Sorry, no posts matched your criteria.
 					<?php endif; ?>
 					
+				
+				<div class="clear separator border"></div>
+					
+				<div class="sharebox row">
+					<div class="col-md-4 facebook">
+						<div class="fb-like" data-href="<?php the_permalink()?>" data-width="100%" data-ref="<?php bloginfo('url')?>" ref="<?php bloginfo('url')?>" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+					</div>
+					<div class="col-md-4 column-last twitter">
+						<a href="https://twitter.com/intent/tweet?button_hashtag=Fundacion&nbsp;Banm&eacute;dica&text=<?php echo get_the_title()?>"  class="twitter-hashtag-button" data-via="FundacionBanmedica" data-url="<?php the_permalink()?>" data-lang="es" data-related="jasoncosta">Tweet #Fundación Banmédica</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>						
+					</div>
+				</div>
+				
+				<div class="clear separator border"></div>
+				
+				
 				<div class="comments">
+					<h3>Comentarios</h3>
 					<div class="fb-comments" data-href="<?php the_permalink() ?>" data-numposts="5" data-width="100%" width="100%" data-colorscheme="light"></div>
 				</div>
 				

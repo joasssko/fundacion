@@ -25,16 +25,14 @@ $typoID = $var->term_id;
 <div id="undermain">
 	<div class="container">
 		<div class="row">
-			<div class="noticias">
+		<div class="col-md-8">
+			<div class="noticias row">
 			
-			<?php $noticias = get_posts(array('numberposts' => '9' , $tipo => $typoID ))?>
+			<?php $noticias = get_posts(array('numberposts' => '10' , $tipo => $typoID ))?>
 			<?php $count = 0;?>
 			<?php foreach ($noticias as $noticia):?>
 			
-			
-				
-			
-				<div class="mini-noticia noticia n0<?php echo $count+3?> <?php if($count %3 == 0 ){echo 'nomargin';}?>">
+				<div class="mini-noticia noticia n0<?php echo $count+3?> <?php if($count % 2 == 0 ){echo 'nomargin';}?>">
 					
 					<?php $catss = wp_get_post_terms($noticia->ID , 'category'); ?>
 					<div class="base">
@@ -68,11 +66,31 @@ $typoID = $var->term_id;
 				});
 			});		
 			</script>
-			<div class="clear"></div>
+			
+				</div>
+			</div>
+			
+			<div class="col-md-4 sidebar">
+				<h3>Otros temas que te pueden interesar</h3>
+				<div class="selector-categorias">
+					<ul>
+						<?php $cat = get_term('4', 'category'); $cat_link = get_category_link(4);?>
+						<li class="clr-<?php echo $cat->slug;?>"><a href="<?php echo $cat_link?>"><?php echo $cat->name?></a></li>
+						<?php $catb = get_term('5', 'category'); $catb_link = get_category_link(5);?>
+						<li class="clr-<?php echo $catb->slug;?>"><a href="<?php echo $catb_link?>"><?php echo $catb->name?></a></li>
+						<?php $catc = get_term('6', 'category'); $catc_link = get_category_link(6);?>
+						<li class="clr-<?php echo $catc->slug;?>"><a href="<?php echo $catc_link?>"><?php echo $catc->name?></a></li>
+						<?php $catd = get_term('7', 'category'); $catd_link = get_category_link(7);?>
+						<li class="clr-<?php echo $catd->slug;?>"><a href="<?php echo $catd_link?>"><?php echo $catd->name?></a></li>
+						<?php $cate = get_term('8', 'category'); $cate_link = get_category_link(8);?>
+						<li class="clr-<?php echo $cate->slug;?>"><a href="<?php echo $cate_link?>"><?php echo $cate->name?></a></li>
+					</ul>
+				</div>
+				<div class="separator"></div>
+			</div>
 			
 			</div>
 		</div>
-		
 	</div>
 </div>
 

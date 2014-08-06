@@ -56,7 +56,7 @@
 					</div>
 				
 				<?php endforeach; ?>
-				<div class="morelink"><a href="<?php echo get_post_type_archive_link('tips')?>">Ver más videos <span class="fa fa-plus fa-fw"></span></a></div>
+				<div class="morelink"><a href="<?php echo get_post_type_archive_link('tips')?>?seccion=alimentacion">Ver más consejos <span class="fa fa-plus fa-fw"></span></a></div>
 				
 			</div>		
 		</div>

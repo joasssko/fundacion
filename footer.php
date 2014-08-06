@@ -28,6 +28,7 @@
 </div>
 
 <div class="separator"></div>
+<div class="separator"></div>
 
 </body>
 <?php wp_footer()?>

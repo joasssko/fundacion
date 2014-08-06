@@ -152,7 +152,7 @@ function videos_register() {
     flush_rewrite_rules();
 }
 
-register_taxonomy("seccion", array('tips', 'testimonios', 'videos' , 'post'), array("hierarchical" => true, "label" => "Seccion", "singular_label" => "Seccion", "rewrite" => true));
+register_taxonomy("seccion", array('tips', 'testimonios', 'videos' , 'post' , 'faqs'), array("hierarchical" => true, "label" => "Seccion", "singular_label" => "Seccion", "rewrite" => true));
 
 
 

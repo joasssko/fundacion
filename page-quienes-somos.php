@@ -10,7 +10,7 @@
 				<p><?php echo get_the_excerpt()?></p>
 			</div>
 			<div class="col-md-6 cols">
-				<a href="#" class="btn btn-default">Inscríbete en el programa</a>
+				
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -43,10 +43,13 @@
 			</div>
 			
 			<div class="col-md-4">
-				<h1>Visión</h1>
 				
-				<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-				<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+				<h1>Misión</h1>
+				<p><?php echo get_field('mision')?></p>
+			
+				<h1>Visión</h1>
+				<p><?php echo get_field('vision')?></p>
+			
 				
 			</div>		
 		</div>
