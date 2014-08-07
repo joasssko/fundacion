@@ -106,7 +106,7 @@
 						<p>Es uno de nuestros primeros programas, el cual busca reducir los índices de obesidad infantil mediante un modelo de intervención  dentro de los colegios.</p>
 					</div>
 				</li>
-				<li>
+				<!--<li>
 					<div class="box">
 						<h2>Pack de la vida</h2>
 						<a href="<?php echo get_page_link(13)?>"><img src="<?php bloginfo('template_directory')?>/images/pack.png" alt="" /></a>
@@ -126,7 +126,9 @@
 						<a href="<?php echo get_page_link(15)?>"><img src="<?php bloginfo('template_directory')?>/images/mujer.png" alt="" /></a>
 						<p>Las várices no sólo afectan la salud, sino la autoestima y la calidad de vida, es por eso que esta campaña busca brindar una solución a las chilenas aquejadas por esta patología.</p>
 					</div>
-				</li>
+				</li> -->
+				
+				<style type="text/css">.bx-controls-direction{ display:none !important}</style>
 			</ul>
 		
 		</div>
@@ -210,7 +212,9 @@
 				jQuery('.noticia .base').hover(function() {
 					jQuery(this).parent('.noticia').find('.linker a').fadeIn('fast')
 				}, function() {
-					jQuery(this).parent('.noticia').find('.linker a').mouseleave().fadeOut('fast')
+					jQuery(this).parent('.noticia').find('.linker a').mouseout(function(event) {
+						jQuery(this).fadeOut('fast')
+					});
 				});
 			});
 			</script>

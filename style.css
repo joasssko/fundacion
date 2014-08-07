@@ -219,7 +219,7 @@ p {  }
 .noticia .sharer .nt{ float:right; padding:10px 8px; clear:both; margin-bottom:5px; }
 
 
-#somos{ background-image:url(images/somos.jpg); background-attachment:fixed; background-position:center; background-size:cover;}
+#somos{ background-image:url(images/porquenace.jpg); background-attachment:fixed; background-position:center; background-size:cover;}
 #somos .cols{ background-color:#f0f0f0; font-family:source sans pro, helvetica, arial, sans-serif; padding-top:20px; padding-bottom:20px;}
 #somos h1{ font-family: source sans pro, helvetica, arial, sans-serif; color:#0a3f6e; font-size:36px; font-weight:300 }
 #somos p{ line-height:150%; color:#818181; font-weight:300 }
@@ -292,7 +292,7 @@ font-size: 14px;
 .content .thumbnail {border: none; background-color:transparent}
 .content .thumbnail .caption{}
 .content .thumbnail .caption h4{ margin:0px; font-weight:700; color:#8c8c8c}
-.content .thumbnail .caption p{ padding:0px !important; line-height:100%; margin-bottom:0px; font-size:10px; font-style:italic}
+.content .thumbnail .caption p{ padding:0px !important; line-height:100%; margin-bottom:0px; font-size:10px !important; font-style:italic}
 
 
 .morelink {float: right;padding: 20px 0;font-family: source sans pro, helvetica, arial, sans-serif;font-weight: 700;text-transform: uppercase;}
@@ -685,7 +685,18 @@ position: relative;}
 .timeliner ul li.activex{ background-color:#6ca33f; border:#525252}
 .hitosforhide{ display:none; padding:30px; background-color:#f2f2f2; list-style:none}
 
+/*******************************************************************************************/
+/*************************************VOCEROS***********************************************/
+/*******************************************************************************************/
 
+.vocero{ padding:20px; display:none }
+.vocero h3{ color:#525252}
+.vocero h5{ font-weight:700; color:#525252; letter-spacing:0; margin-bottom:0px; padding-bottom:0px;; margin-top:5px;}
+.vocero p{ padding:15px 0;}
+.vocero.activexx{ display:block}
+.vocero-mini{ margin:10px 0px; cursor:pointer; clear:both; padding:10px 0px; border-bottom:1px solid #f2f2f2; }
+.vocero-mini h4, .vocero-mini h5{ letter-spacing:0; color:#525252; font-weight: 700; margin-top:0px;}
+.vocero-mini img{ border-radius:50px}
 
 /*******************************************************************************************/
 /*************************************NAV***************************************************/
@@ -733,3 +744,4 @@ position: relative;}
 @media (max-width: 1200px){
 	.search form input{ width:195px;}
 }
+

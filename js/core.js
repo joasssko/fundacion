@@ -827,7 +827,7 @@ jQuery(function(){
 });
 
 jQuery(window).scroll(function(){
-    if(jQuery(document).scrollTop() > 450)
+    if(jQuery(document).scrollTop() > 350)
     {
         if(jQuery('#header').data('size') == 'big')
         {

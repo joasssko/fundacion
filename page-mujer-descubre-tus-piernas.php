@@ -75,7 +75,7 @@
 					</div>
 				
 				<?php endforeach; ?>
-				<div class="morelink"><a href="<?php echo get_post_type_archive_link('tips')?>">Ver más videos <span class="fa fa-plus fa-fw"></span></a></div>
+				<div class="morelink"><a href="<?php echo get_post_type_archive_link('tips')?>?seccion=mujer">Ver más tips <span class="fa fa-plus fa-fw"></span></a></div>
 			</div>
 		</div>
 	</div>
@@ -113,7 +113,7 @@
 					<div class="clear"></div>
 				</div>
 				<?php endforeach;?>
-				<div class="morelink"><a href="<?php echo get_post_type_archive_link('tips')?>">Ver más videos <span class="fa fa-plus fa-fw"></span></a></div>
+				<div class="morelink"><a href="<?php echo get_post_type_archive_link('testimonios')?>?seccion=mujer">Ver más testimonios <span class="fa fa-plus fa-fw"></span></a></div>
 				
 				<div class="separator"></div>
 				<div class="clear separator border"></div>

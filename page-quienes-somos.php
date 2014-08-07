@@ -26,8 +26,6 @@
 	</div>
 </div>
 
-
-
 <div id="undermain" style="background-image:url(<?php echo get_field('superbackground_b')?>)">
 	<div class="container">
 		<div class="row">
@@ -46,10 +44,11 @@
 				
 				<h1>Misión</h1>
 				<p><?php echo get_field('mision')?></p>
-			
+				
+				<?php if(get_field('vision')){?>
 				<h1>Visión</h1>
 				<p><?php echo get_field('vision')?></p>
-			
+				<?php }?>
 				
 			</div>		
 		</div>
@@ -104,5 +103,12 @@
 </div>
 
 
+<style type="text/css">
+	 #bigcarousel{ background-size:100% auto !important}
+	 
+	 @media (max-width: 1490px){
+		#bigcarousel{background-size: auto 55% !important}
+	 }
+</style>
 
 <?php get_footer()?>

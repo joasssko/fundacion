@@ -27,10 +27,19 @@ $typoID = $var->term_id;
 		</div>
 	</div>
 </div>
+<?php }elseif($type=='vive_sano'){?>
+<div id="insidemenu" class="clr-vive-sano" style="margin-top:-45px;">
+	<div class="container">
+		<div class="row">			
+			<?php $menu = get_field('menu_inside_selector')?>
+			<?php wp_nav_menu( array('menu' => 'Vive sano' , 'container' => 'none' , 'menu_id' =>  'vive-sano' , 'menu_class' => 'menu-insider'));?>
+		</div>
+	</div>
+</div>
 <?php }?>
 
 
-<div id="undermain" style="background-image:url(<?php echo get_field('superbackground_b' , $post->ID)?>) ; <?php if($type !='mujer'){ echo 'margin-top: -42px;';}?>">
+<div id="undermain" style="background-image:url(<?php echo get_field('superbackground_b' , $post->ID)?>) ; <?php if($type !='mujer' && $type != 'vive_sano'){ echo 'margin-top: -42px;';}?>">
 	<div class="container">
 		<div class="row">
 		
@@ -73,8 +82,13 @@ $typoID = $var->term_id;
 					</div>
 				
 				<?php endforeach; ?>
-				<div class="morelink"><a href="<?php echo get_post_type_archive_link('tips')?>">Ver más videos <span class="fa fa-plus fa-fw"></span></a></div>
 				
+				
+				<?php if($type=='mujer'){?>
+				<div class="morelink"><a href="<?php echo get_post_type_archive_link('tips')?>?seccion=mujer">Ver más tips <span class="fa fa-plus fa-fw"></span></a></div>
+				<?php }elseif($type=='vive_sano'){?>
+				<div class="morelink"><a href="<?php echo get_post_type_archive_link('tips')?>?seccion=vive_sano">Ver más tips <span class="fa fa-plus fa-fw"></span></a></div>
+				<?php }?>
 			</div>
 			
 		</div>

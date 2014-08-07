@@ -22,7 +22,30 @@ $typoID = $var->term_id;
 </div>
 <div class="clear"></div>
 
-<div id="undermain">
+<?php if($type=='mujer-descubre-tus-piernas'){?>
+<div id="insidemenu" class="clr-mujer-descubre-tus-piernas" style="margin-top:-45px;">
+	<div class="container">
+		<div class="row">			
+			<?php $menu = get_field('menu_inside_selector')?>
+			<?php wp_nav_menu( array('menu' => 'Mujer descubre tus piernas' , 'container' => 'none' , 'menu_id' =>  'mujer-descubre-tus-piernas' , 'menu_class' => 'menu-insider'));?>
+		</div>
+	</div>
+</div>
+<?php }elseif($type=='vive-sano'){?>
+<div id="insidemenu" class="clr-vive-sano" style="margin-top:-45px;">
+	<div class="container">
+		<div class="row">			
+			<?php $menu = get_field('menu_inside_selector')?>
+			<?php wp_nav_menu( array('menu' => 'Vive sano' , 'container' => 'none' , 'menu_id' =>  'vive-sano' , 'menu_class' => 'menu-insider'));?>
+		</div>
+	</div>
+</div>
+<?php }?>
+
+
+<div id="undermain" style="background-image:url(<?php echo get_field('superbackground_b' , $post->ID)?>) ; <?php if($type !='mujer-descubre-tus-piernas' && $type != 'vive-sano'){ echo 'margin-top: -42px;';}?>">
+
+	
 	<div class="container">
 		<div class="row">
 		<div class="col-md-8">
@@ -71,6 +94,7 @@ $typoID = $var->term_id;
 			</div>
 			
 			<div class="col-md-4 sidebar">
+				<div class="separator"></div>
 				<h3>Otros temas que te pueden interesar</h3>
 				<div class="selector-categorias">
 					<ul>
@@ -83,6 +107,8 @@ $typoID = $var->term_id;
 						<?php $catd = get_term('7', 'category'); $catd_link = get_category_link(7);?>
 						<li class="clr-<?php echo $catd->slug;?>"><a href="<?php echo $catd_link?>"><?php echo $catd->name?></a></li>
 						<?php $cate = get_term('8', 'category'); $cate_link = get_category_link(8);?>
+						<li class="clr-<?php echo $cate->slug;?>"><a href="<?php echo $cate_link?>"><?php echo $cate->name?></a></li>
+						<?php $cate = get_term('16', 'category'); $cate_link = get_category_link(16);?>
 						<li class="clr-<?php echo $cate->slug;?>"><a href="<?php echo $cate_link?>"><?php echo $cate->name?></a></li>
 					</ul>
 				</div>

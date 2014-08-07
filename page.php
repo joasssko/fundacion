@@ -59,6 +59,19 @@
 			</div>
 			
 			<div class="col-md-4">
+			
+			<?php if($post->post_parent == 9){?>
+			
+				<h1>Misión</h1>
+				<p><?php echo get_field('mision' , 9)?></p>
+				
+				<?php if(get_field('vision' , 9)){?>
+				<h1>Visión</h1>
+				<p><?php echo get_field('vision' , 9)?></p>
+				<?php }?>
+				
+			<?php }else{?>
+			
 				<h2>Testimonios</h2>
 				
 				<?php $testimonios = get_posts(array( 'post_type' => 'testimonios' , 'seccion' => 'mujer' , 'posts_per_page' => '2' ));
@@ -73,14 +86,14 @@
 					<div class="clear"></div>
 				</div>
 				<?php endforeach;?>
-				<div class="morelink"><a href="<?php echo get_post_type_archive_link('tips')?>">Ver más videos <span class="fa fa-plus fa-fw"></span></a></div>
+				<div class="morelink"><a href="<?php echo get_post_type_archive_link('testimonios')?>?seccion=mujer">Ver más testimonios <span class="fa fa-plus fa-fw"></span></a></div>
 				
 				<div class="separator"></div>
 				<div class="clear separator border"></div>
 				
 				<h2>Clínicas Asociadas</h2>
 				
-				
+			<?php }?>
 				
 			</div>
 			
